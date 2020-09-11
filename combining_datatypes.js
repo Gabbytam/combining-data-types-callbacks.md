@@ -22,3 +22,38 @@ console.log(Object.keys(receipt[2])[2]);
 //4. Create an array called apartmentBuilding that has an array as one of its elements, the inner array should be the names of the tenants. Log one of the elements of the inner array.
 const apartmentBuilding= ['townhouse', 'condo', ['Hank', 'Lara', 'Tommy', 'Gerald', 'Susan'], 'apartment', 'loft'];
 console.log(apartmentBuilding[2][3]);
+
+//Combine objects, arrays, and functions more than one level deep
+
+//1. Create a function knit that returns an object that has the following kinds of properties item: scarf, size : 6ft etc. Log a value of that object (hint: call the function and then call a property on the return value).
+const knit= () => {
+    return {
+        item: 'scarf',
+        size: '6ft',
+        color: 'yellow'
+    };
+}
+console.log(knit().item);
+
+//2. Create a function crayonSelector that returns an object that has an array (you can reuse your crayonBox object). Log one of the elements of that array.
+//didnt use the crayonBox object....
+const crayonSelector= () => {
+    return {
+        morning: 'gray',
+        afternoon: 'blue',
+        sunset: ['pink', 'purple', 'orange', 'yellow'],
+        night: 'black'
+    }
+}
+console.log(crayonSelector().sunset[1]);
+
+//3. Create a function powerButton that returns a function called options - options should console.log a simple message like select a song. Call that inner function
+const powerButton= () => {
+    //use this notation because were giving the function a name, if no name, we can write it as: return ()=> {__codeblock__}
+    return function options() {
+      console.log('Select a song');
+    }
+}
+console.log(powerButton()());
+//console.log(powerButton()); //returns [Function: options]
+ 
